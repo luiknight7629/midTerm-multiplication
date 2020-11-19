@@ -54,16 +54,15 @@ var tA = document.getElementById("txtA").value;
 var tB = document.getElementById("txtB").value;
 var tC = document.getElementById("txtC").value;
 
-if (tB<=0) {alert("Please Enter a number" );}
-
-else if (tA=>tB){alert("Please Enter the starting number that is not greater tham the limit" );}
+if (tA > tB){alert("Please Enter the starting number that is not greater tham the limit" );}
 
 else {var show = document.getElementById("show");
 show.style.display = "block";
 for (var i = tA; i <= tC; i++){var multi = i*tB;
 document.getElementById("output").innerHTML += i + " X " + tB + " = " + multi+"<hr>";
 }
-}}
+}
+}
 </script>
 </body>  
 </html>	
