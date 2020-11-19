@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>  
+<html>  
+<head>
+<title>Multiplier</title>  
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">  
+  <style type="text/css">
+  	body{background: #568f8f;}
+  	.cl-bg {background-color: #2f4f4f;}
+  	input[type="number"]{width: 100px; border-radius: 20%;}
+  	span{display: block; text-align: center;}
+  	button{width: 300px;}
+  	p{padding-top: 2rem;}
+  </style>  
+</head>
+
+<body>
+<div class="cl-bg container-fluid p-2 text-light">
+	<div class="row "><div class="col-12"><h2 class="text-center pb-3">Multiplication</h2></div></div>
+<div class="row">
+	<div class="col-6 text-right">
+		<label class="font-weight-bold">Start at</label>
+	</div>  
+	<div class="col-6">
+		<input type="number" id="txtA">
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-6 text-right">
+		<label class="font-weight-bold">Multiply by</label>
+	</div>
+	<div class="col-6">
+		<input type="number" id="txtB">
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-6 text-right">
+		<label class="font-weight-bold">Limit</label>
+	</div>
+	<div class="col-6">
+		<input type="number" id="txtC">
+	</div>
+</div>
+<div class="row">
+	<div class="col-12 text-center">
+		<button class="btn btn-lg btn-outline-light" onclick="multiply()">Multiply</button>
+	</div>
+</div>
+</div>
+<div  id=show class="container text-center border col-3" style="display: none;background:#eff5f5;">
+
+<p id="output" class="font-weight-bold h4"></p>
+</div>
+<script>function multiply(){
+var tA = document.getElementById("txtA").value;
+var tB = document.getElementById("txtB").value;
+var tC = document.getElementById("txtC").value;
+
+if (tB<=0) {alert("Please Enter a number" );}
+
+else if (tA>tB){alert("Please Enter the starting number that is not greater tham the limit" );}
+
+else {var show = document.getElementById("show");
+show.style.display = "block";
+for (var i = tA; i <= tC; i++){var multi = i*tB;
+document.getElementById("output").innerHTML += i + " X " + tB + " = " + multi+"<hr>";
+}
+}
+}
+</script>
+</body>  
+</html>	
+
